@@ -4,7 +4,7 @@ import { DB_USERNAME, DB_PASSWORD, DB_PORT, DB_HOST, DB_NAME } from './config';
 
 
   export const AppDataSource = new DataSource({
-    type: 'mysql',
+    type: 'postgres',
     username: DB_USERNAME,
     password: DB_PASSWORD,
     port: Number(DB_PORT),

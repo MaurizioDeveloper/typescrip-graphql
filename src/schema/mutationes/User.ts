@@ -2,7 +2,6 @@ import {GraphQLString, GraphQLBoolean, GraphQLID, GraphQLInputObjectType} from '
 import { Users } from '../../entities/Users';
 import { userType } from '../typeDefs/User';
 import bcrypt from 'bcryptjs';
-import { resolve } from 'path';
 import { messageType } from '../typeDefs/Message';
 
 export const CREATE_USER = {
@@ -22,7 +21,7 @@ export const CREATE_USER = {
       username:username,
       password:encryptPassword
     })
-    console.log(result)
+    
     //return {...args, id: result.identifiers[0].id, password: encryptPassword}
     return {username}
   }
